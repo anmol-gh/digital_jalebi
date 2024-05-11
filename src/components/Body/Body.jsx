@@ -12,7 +12,10 @@ const Body = () => {
 			.then((data) => {
 				setRecord(data.users);
 			})
-			.catch((error) => {
+      .catch((error) => {
+          window.alert(
+						"An error was encountered, please refresh page and retry"
+					);
 				console.log("Error: ", error);
 			});
 	}, []);

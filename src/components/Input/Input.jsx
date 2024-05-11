@@ -11,7 +11,6 @@ const Input = () => {
 	// Set variable name
 	const nameChange = (event) => {
 		setName(event.target.value);
-		console.log(name);
 	};
 
 	const changeTable = () => {
@@ -52,7 +51,6 @@ const Input = () => {
 			const gender = document.createElement("td");
 			gender.textContent = list.gender;
 			row.appendChild(gender);
-			console.log(row);
 
 			const tableBody = document.getElementById("table-body");
 			// tableBody.app;
@@ -69,11 +67,11 @@ const Input = () => {
 				.then((data) => {
 					setResult(data.users);
 				})
-				.catch((error) => {
-					console.log("error");
+                .catch((error) => {
+                    window.alert("An error was encountered, please refresh page and retry")
+					console.log(error,"error");
 				});
 			setPressed(false);
-			console.log(result, "usestate");
 			changeTable();
 		}
 	});
