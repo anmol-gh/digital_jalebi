@@ -1,0 +1,9 @@
+.input-text {
+    padding : 3px;
+}
+
+.input-btn {
+    padding : 3px;
+    cursor: pointer;
+    margin-left : 5px;
+}
